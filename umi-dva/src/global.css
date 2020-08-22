@@ -1,1 +1,23 @@
 /* 这里为全局样式 */
+
+/* 这里为强制 progress 的样式 */
+.ant-slider-rail {
+    height: 5px;
+}
+
+.ant-slider-track {
+    height: 5px;
+    background-color: rgba(232,60,60);
+}
+
+.ant-slider-handle {
+    border: solid 2px rgba(232,60,60);
+}
+
+.ant-slider-handle:focus {
+    border: solid 2px rgba(232,60,60);
+}
+
+.ant-slider:hover .ant-slider-track{
+    background-color: rgba(232,60,60);;
+}

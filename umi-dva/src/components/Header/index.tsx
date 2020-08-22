@@ -1,12 +1,7 @@
 import React from 'react';
 import style from './style.less'
 import { Row, Col, Input, Avatar } from 'antd';
-import { createFromIconfontCN, LeftOutlined, RightOutlined, SearchOutlined, UserOutlined, CaretDownOutlined } from '@ant-design/icons';
-
-
-const IconFont = createFromIconfontCN({
-    scriptUrl: '//at.alicdn.com/t/font_1769370_lvc5kjqx1sa.js',
-});
+import { LeftOutlined, RightOutlined, SearchOutlined, UserOutlined, CaretDownOutlined } from '@ant-design/icons';
 
 const iconColor: React.CSSProperties = {
     color: '#f5f5f5'
@@ -42,7 +37,7 @@ class Header extends React.Component {
                     </Col>
                 </Col>
                 <Col span={12}>
-                    <Col span={12} push={16}>
+                    <Col span={8} push={16}>
                         <div className={style.logo_info}>
                             <Avatar size={25} icon={<UserOutlined />} />
                             <span className={style.logo_Not}>未登录</span>

@@ -1,7 +1,5 @@
-import { http } from '@/utiles/request'
+import { service } from '@/utiles/request'
 
 export async function GetIndex() {
-    return await http('/api/users', {
-        method: "GET"
-    })
+    return await service.get('/api/users')
 }
