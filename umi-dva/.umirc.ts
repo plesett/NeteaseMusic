@@ -18,9 +18,9 @@ export default defineConfig({
       path: '/',
       component: '@/layouts/index',
       routes: [
-        { path: '/', component: '@/pages/index' },
+        { path: '/', component: '@/pages/index', title: "-网易音乐-", },
         {
-          path: '/test/:id', component: '@/pages/test', title: "测试页面", wrappers: [
+          path: '/playlist/', component: '@/pages/playlist', title: "-歌单-", wrappers: [
             '@/auth/index',
           ]
         }

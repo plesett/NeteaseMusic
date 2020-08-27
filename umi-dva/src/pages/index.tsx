@@ -2,13 +2,17 @@ import React from 'react';
 import styles from './index.less';
 import { Link, request, useRequest } from 'umi';
 import { GetIndex } from '@/api';
+import { Banner } from '@/components/Carousel';
+import RecommendedCard from '@/components/RecommendedCard';
 
 export default () => {
-  document.title = "我是主页哦~"
+
+  document.title = "网易云"
+
   const { data, error, loading }: { data: any, error: any, loading: boolean } = useRequest(() => {
     return GetIndex();
   });
-  console.log(data, error, loading, '---')
+
   if (loading) {
     return <h1>loading...</h1>;
   }
@@ -17,8 +21,13 @@ export default () => {
   }
   return (
     <div>
+      <Banner />
+      <RecommendedCard
+        title="推荐歌单"
+        titleSwitch={true}
+      />
       <h1 className={styles.title}>Page index*------{data.msg}</h1>
-      <Link to="/test/888">点击跳转</Link>
+      {/* <Link to="/test/888">点击跳转</Link> */}
     </div>
   );
 }
