@@ -16,12 +16,12 @@ export default ({ children, location, route, history, match }: IRouteComponentPr
 			<Layout>
 				<div className={style.layout_box}>
 					<Row style={{ width: '100%' }}>
-						<Col span={3}>
+						<Col span={3} md={3} className={style.Sider_box}>
 							<SiderComponents />
 						</Col>
 						<Col
 							span={21}
-							style={{ background: '#fcfcfc' }}
+							className={style.content}
 						>
 							<MenuTab />
 							<Row

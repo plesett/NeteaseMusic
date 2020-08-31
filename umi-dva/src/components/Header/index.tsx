@@ -7,49 +7,48 @@ const iconColor: React.CSSProperties = {
     color: '#f5f5f5'
 }
 
-const warp_bg: React.CSSProperties = {
-    backgroundColor: 'rgba(198,47,47)'
-}
-
 class Header extends React.Component {
     render() {
         return (
-            <Row align="middle" justify="space-between" style={warp_bg}>
-                <Col span={12}>
-                    <Col span={12} className={style.top_warp_left}>
-                        <div className={style.logo_box}>
-                            <img src={require('@/static/images/wy_logo.png')} alt="" />
-                        </div>
-                        <div className={style.logo_info_search}>
-                            <div className={style.icon_direction}>
-                                <div className={style.icon_left}>
-                                    <LeftOutlined style={iconColor} />
+            <>
+                <Row className={style.Warp_header}>
+                    <Col flex="600px" xs={7}>
+                        <Col span={12} className={style.top_warp_left}>
+                            <div className={style.logo_box}>
+                                <img src={require('@/static/images/wy_logo.png')} alt="" />
+                            </div>
+                            <div className={style.logo_info_search}>
+                                <div className={style.icon_direction}>
+                                    <div className={style.icon_left}>
+                                        <LeftOutlined style={iconColor} />
+                                    </div>
+                                    <div className={style.icon_right}>
+                                        <RightOutlined style={iconColor} />
+                                    </div>
                                 </div>
-                                <div className={style.icon_right}>
-                                    <RightOutlined style={iconColor} />
+                                <div className={style.search_box}>
+                                    <Input className={style.search_music} placeholder="搜索音乐音乐，视频，歌词，电台" />
+                                    <SearchOutlined />
                                 </div>
                             </div>
-                            <div className={style.search_box}>
-                                <Input className={style.search_music} placeholder="搜索音乐音乐，视频，歌词，电台" />
-                                <SearchOutlined />
+                        </Col>
+                    </Col>
+                    <Col flex="auto" style={{ lineHeight: '3' }}>
+                        <Col style={{ float: 'right', marginRight: '20px' }}>
+                            <div className={style.logo_info}>
+                                <Avatar size={25} icon={<UserOutlined />} />
+                                <span className={style.logo_Not}>未登录</span>
+                                <CaretDownOutlined style={{ color: "#e2e2e2" }} />
+                                <span>开通VIP</span>
+                                <img className={style.yf_icon} src={require('@/static/images/yf.png')} alt="" />
+                                <img className={style.yf_icon} src={require('@/static/images/dx.png')} alt="" />
+                                <img className={style.yf_icon} src={require('@/static/images/cl.png')} alt="" />
                             </div>
-                        </div>
+                        </Col>
                     </Col>
-                </Col>
-                <Col span={12}>
-                    <Col span={8} push={16}>
-                        <div className={style.logo_info}>
-                            <Avatar size={25} icon={<UserOutlined />} />
-                            <span className={style.logo_Not}>未登录</span>
-                            <CaretDownOutlined style={{ color: "#e2e2e2" }} />
-                            <span>开通VIP</span>
-                            <img className={style.yf_icon} src={require('@/static/images/yf.png')} alt="" />
-                            <img className={style.yf_icon} src={require('@/static/images/dx.png')} alt="" />
-                            <img className={style.yf_icon} src={require('@/static/images/cl.png')} alt="" />
-                        </div>
-                    </Col>
-                </Col>
-            </Row>
+                </Row>
+                <div className={style.openHe}></div>
+            </>
         )
     }
 }

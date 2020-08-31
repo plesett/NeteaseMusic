@@ -1,61 +1,69 @@
-.top_warp_left{
-    display: flex;
-    justify-items: center;
-    justify-content: start;
-    align-items: center;
-    .logo_box{
-        height: 45px;
-        padding: 5px 0;
-        margin: 0 15px;
-        &>img{
-            height: 100%;
-        }
-    }
-    .logo_info_search{
+.Warp_header{
+    background-color: rgba(198,47,47);
+    .top_warp_left{
         display: flex;
+        justify-items: center;
         justify-content: start;
         align-items: center;
-        margin: 0 50px;
-        .icon_direction{
-            display: flex;
-            justify-content: center;
-            flex-wrap: nowrap;
-            &>div{
-                height: 22px;
-                // padding: 3px;
-                border: 0.5px solid #9e9e9e57;
-                &>span{
-                    margin: 0 10px;
-                }
-            }
-            .icon_left{
-                border-top-left-radius: 3px;
-                border-bottom-left-radius: 3px;
-            }
-            .icon_right{
-                border-top-right-radius: 3px;
-                border-bottom-right-radius: 3px;
+        .logo_box{
+            height: 45px;
+            padding: 5px 0;
+            margin: 0 15px;
+            &>img{
+                height: 100%;
             }
         }
-        .search_box{
-            position: relative;
-            .search_music{
-                margin: 0 15px;
-                color: #ffffff;
-                width: 237px;
-                height: 26px;
-                border-radius: 25px;
-                font-size: 12px;
-                // background-color: rgba(218, 218, 218, 0.8);
+        .logo_info_search{
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            margin: 0 50px;
+            .icon_direction{
+                display: flex;
+                justify-content: center;
+                flex-wrap: nowrap;
+                &>div{
+                    height: 22px;
+                    // padding: 3px;
+                    border: 0.5px solid #9e9e9e57;
+                    &>span{
+                        margin: 0 10px;
+                    }
+                }
+                .icon_left{
+                    border-top-left-radius: 3px;
+                    border-bottom-left-radius: 3px;
+                }
+                .icon_right{
+                    border-top-right-radius: 3px;
+                    border-bottom-right-radius: 3px;
+                }
             }
-            &>span{   
-                color: #e2e2e2;
-                position: absolute;
-                right: 25px;
-                top: 6px;
+            .search_box{
+                position: relative;
+                .search_music{
+                    margin: 0 15px;
+                    color: #ffffff;
+                    width: 237px;
+                    height: 26px;
+                    border-radius: 25px;
+                    font-size: 12px;
+                    // background-color: rgba(218, 218, 218, 0.8);
+                }
+                &>span{   
+                    color: #e2e2e2;
+                    position: absolute;
+                    right: 25px;
+                    top: 6px;
+                }
             }
         }
     }
+}
+
+.openHe{
+    height: 45px;
+    display: none;
 }
 
 
@@ -75,5 +83,30 @@
     .yf_icon{
         margin: 0 10px;
         height: 20px;
+    }
+}
+
+
+// 媒体查询
+@media screen and (max-width: 940px) {
+    .logo_info_search {
+        display: none !important;
+    }
+}
+
+// 手机宽度
+@media screen and (max-width: 375px) {
+    .logo_info {
+        display: none !important;
+    }
+    .Warp_header{
+        position: fixed;
+        width: 100%;
+        left: 0;
+        right: 0;
+        z-index: 50;
+    }
+    .openHe{
+        display: block !important;
     }
 }
