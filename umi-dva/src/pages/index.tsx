@@ -4,6 +4,7 @@ import { Link, request, useRequest } from 'umi';
 import { GetIndex } from '@/api';
 import { Banner } from '@/components/Carousel';
 import RecommendedCard from '@/components/RecommendedCard';
+import { Row, Col } from 'antd';
 
 export default () => {
 
@@ -20,14 +21,13 @@ export default () => {
     return <h1>请求错误</h1>;
   }
   return (
-    <div>
+    <>
       <Banner />
       <RecommendedCard
         title="推荐歌单"
         titleSwitch={true}
       />
       <h1 className={styles.title}>Page index*------{data.msg}</h1>
-      {/* <Link to="/test/888">点击跳转</Link> */}
-    </div>
+    </>
   );
 }

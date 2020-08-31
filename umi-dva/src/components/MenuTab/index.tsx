@@ -12,16 +12,16 @@ const MenuTab = (props: any) => {
 		history.push(router)
 		setRouter(id)
 	}
-	useEffect(() => {
-		// 检查当前的路由是否匹配正常的tab
-		if (props.history.location.pathname === dataTab[RouterPage].router) {
-			console.log("页面正常")
-		} else {
-			console.log("页面与路由不匹配")
-			// 按照 tab 值去实现
-			history.push('/')
-		}
-	}, [menuTab])
+	// useEffect(() => {
+	// 	// 检查当前的路由是否匹配正常的tab
+	// 	if (props.history.location.pathname === dataTab[RouterPage].router) {
+	// 		console.log("页面正常")
+	// 	} else {
+	// 		console.log("页面与路由不匹配")
+	// 		// 按照 tab 值去实现
+	// 		history.push('/')
+	// 	}
+	// }, [menuTab])
 	return (
 		<div className={style.MenuTab}>
 			{

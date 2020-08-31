@@ -23,8 +23,13 @@ export default defineConfig({
           path: '/playlist/', component: '@/pages/playlist', title: "-歌单-", wrappers: [
             '@/auth/index',
           ]
+        },
+        {
+          path: '/day/', component: '@/pages/day', title: "-每日推荐-", wrappers: [
+            '@/auth/index',
+          ]
         }
       ],
-    },
+    }
   ],
 });

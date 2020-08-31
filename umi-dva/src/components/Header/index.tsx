@@ -2,6 +2,7 @@ import React from 'react';
 import style from './style.less'
 import { Row, Col, Input, Avatar } from 'antd';
 import { LeftOutlined, RightOutlined, SearchOutlined, UserOutlined, CaretDownOutlined } from '@ant-design/icons';
+import { Link } from 'umi';
 
 const iconColor: React.CSSProperties = {
     color: '#f5f5f5'
@@ -14,9 +15,9 @@ class Header extends React.Component {
                 <Row className={style.Warp_header}>
                     <Col flex="600px" xs={7}>
                         <Col span={12} className={style.top_warp_left}>
-                            <div className={style.logo_box}>
+                            <Link to="/" className={style.logo_box}>
                                 <img src={require('@/static/images/wy_logo.png')} alt="" />
-                            </div>
+                            </Link>
                             <div className={style.logo_info_search}>
                                 <div className={style.icon_direction}>
                                     <div className={style.icon_left}>
